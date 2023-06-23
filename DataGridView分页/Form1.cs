@@ -32,7 +32,7 @@ namespace DataGridView分页
             // 弹出对话框，读取Microsoft.EntityFrameworkCore.Sqlite文件
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "db文件|*.db";
-            openFileDialog.InitialDirectory = "C:\\Users\\NUC\\OneDrive\\C#\\项目\\二维码质检\\QRChecker_winform\\QRChecker_winform\\bin\\Debug\\net6.0-windows";
+            //openFileDialog.InitialDirectory = "";
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Title = "请选择db文件";
 
