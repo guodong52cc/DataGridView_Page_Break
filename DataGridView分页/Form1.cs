@@ -24,6 +24,11 @@ namespace DataGridView分页
                 comboBox2.Items.Add("未选择表");
                 comboBox2.Text = "未选择表";
             }
+
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            btnNext.Enabled = false;
+            btnPrev.Enabled = false;
         }
 
         // 读取Sqlite文件
@@ -158,12 +163,16 @@ namespace DataGridView分页
                             reader.GetValues(rowData);
                             chartData.Add(rowData);
                         }
-
-                        LoadDataForPage(currentPage);
-                        UpdatePageControls();
-                        UpdateJump();
                     }
                 }
+                comboBox1.Enabled = true;
+                comboBox2.Enabled = true;
+                btnNext.Enabled = true;
+                btnPrev.Enabled = true;
+
+                LoadDataForPage(currentPage);
+                UpdatePageControls();
+                UpdateJump();
             }
         }
 
